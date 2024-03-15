@@ -21,4 +21,43 @@
     	<delete id="delete">
     		delete company where com_id = #{comId}
     	</delete>
+    	
+    	<!-- 회사정보 수정 -->
+    	<update id="update">
+    		update company
+    		set
+    		com_pw = #{companyDto.comPw}, com_name = #{companyDto.comName},
+    		com_post = #{companyDto.comPost}, com_addr1 = #{companyDto.comAddr1}, com_addr2 = #{companyDto.comAddr2},
+    		com_tel = #{companyDto.comTel}, com_bs = #{companyDto.comBs},
+    		com_region = #{companyDto.comRegion}, com_email = #{companyDto.comEmail}
+    	</update>
+    	
+    	<!--  회사정보 상세 -->
+    	<select id="find" resultType="companyDto">
+    		select * from company where com_id = #{comId}
+    	</select>
+    	
+    	<!-- 이미지 연결 -->
+    	<insert id="connect">
+    		insert into com_image(com_id,attach_no)
+    		values(${comId},${attachNo})
+    	</insert>
+    	
+    	<!-- 이미지 삭제 -->
+    	<delete id="deleteImage">
+    		delete com_image where com_id=${comId}
+    	</delete>
+    	
+    	<!-- 이미지 찾기 -->
+    	<select id="findImage" resultType="AttachDto">
+    		select * from attach
+    		where attach_no = (
+    		 select attahc_no
+    		 from com_image
+    		 where com_id = #{comId}
+    		)
+    	</select>
+    	
+    	<!-- 페이지네이션 -->
+    	<!-- 카운트 -->
     </mapper>
