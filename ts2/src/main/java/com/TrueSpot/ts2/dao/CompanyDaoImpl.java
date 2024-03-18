@@ -18,33 +18,33 @@ public class CompanyDaoImpl implements CompanyDao {
 
 	@Override
 	public void insert(CompanyDto companyDto) {
-		sqlSession.insert("com.join",companyDto);
+		sqlSession.insert("company.insert",companyDto);
 		
 	}
 
 	@Override
 	public CompanyDto selectOne(String comName) {
-		return sqlSession.selectOne("com.find",comName);
+		return sqlSession.selectOne("company.find",comName);
 	}
 
 	@Override
 	public boolean update(CompanyDto companyDto) {
-		return sqlSession.update("com.update",companyDto)>0;
+		return sqlSession.update("company.update",companyDto)>0;
 	}
 
 	@Override
 	public boolean delete(String comId) {
-		return sqlSession.delete("com.delete",comId)>0;
+		return sqlSession.delete("company.delete",comId)>0;
 	}
 
 	@Override
 	public List<CompanyDto> selectListByPage(PaginationVO vo) {
-		return sqlSession.selectOne("com.selectListByPage",vo);
+		return sqlSession.selectOne("company.selectListByPage",vo);
 	}
 
 	@Override
 	public int countList(PaginationVO vo) {
-		return sqlSession.selectOne("com.countList",vo);
+		return sqlSession.selectOne("company.countList",vo);
 	}
 
 	@Override
@@ -52,17 +52,17 @@ public class CompanyDaoImpl implements CompanyDao {
 		Map<String,Object> params = new HashMap<>();
 		params.put("comId",comId);
 		params.put("attachNo", attachNo);
-		sqlSession.update("com.connect",params);
+		sqlSession.update("company.connect",params);
 	}
 
 	@Override
 	public boolean deleteImage(String comId) {
-		return sqlSession.delete("com.deleteImage",comId)>0;
+		return sqlSession.delete("company.deleteImage",comId)>0;
 	}
 
 	@Override
 	public AttachDto findImage(String comId) {
-		return sqlSession.selectOne("com.findImage",comId);
+		return sqlSession.selectOne("company.findImage",comId);
 	}
 
 }

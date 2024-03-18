@@ -4,7 +4,7 @@
 
 <h2>회사 가입</h2>
 
-<form action="post" autocomplete="off">
+<form action="join" method="post" autocomplete="off">
  아이디* <input type="text" name="comId" required><br><br>
  비밀번호* <input type="password" name="comPw" required><br><br>
  회사명* <input type="text" name="comName" required><br><br>
@@ -13,8 +13,8 @@
  <input type="text" name="comAddr1" placeholder="기본주소"><br><br>
  <input type="text" name="comAddr2" placeholder="상세주소"><br><br>
  전화번호 <input type="tel" name="comTel"><br><br>
- 사업자번호 <input type="text" name="comBs"><br><br>
+ 사업자번호* <input type="text" name="comBs"><br><br>
  지역 <input type="text" name="comRegion"><br><br>
- 이메일<input type="email" name="comEmail">
+ 이메일<input type="email" name="comEmail"><br><br>
  <button type="submit"> 가입하기</button>
 </form>

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 
 @Data@NoArgsConstructor@AllArgsConstructor@Builder
 public class CompanyDto {
-	private String comId,comPw,comName,comPost,comAddr1,comAddr2,comTel,comBs,comRegionm,comEmail;
+	private String comId,comPw,comName,comPost,comAddr1,comAddr2,comTel,comBs,comRegion,comEmail;
 	private int comPayStaus;
 	private Date comJoinDate;
 }

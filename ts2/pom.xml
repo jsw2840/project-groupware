@@ -78,22 +78,23 @@
 		</dependency>
 		
 		<!--JSP를 사용하기 위한 라이브러리(의존성)-->
+		<!-- 스프링 3.x 대응-->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
 		
 		<dependency>
-		    <groupId>jakarta.servlet</groupId>
-		    <artifactId>jakarta.servlet-api</artifactId>
+	    <groupId>jakarta.servlet</groupId>
+	    <artifactId>jakarta.servlet-api</artifactId>
 		</dependency>
 		<dependency>
-		    <groupId>org.glassfish.web</groupId>
-		    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+		 <groupId>org.glassfish.web</groupId>
+		 <artifactId>jakarta.servlet.jsp.jstl</artifactId>
 		</dependency>
 		<dependency>
-		    <groupId>jakarta.servlet.jsp.jstl</groupId>
-		    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+   		 <groupId>jakarta.servlet.jsp.jstl</groupId>
+  		  <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
 		</dependency>
 
 		<!-- 클래스 자동화 도구(구문 생성) -->

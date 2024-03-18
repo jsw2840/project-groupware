@@ -9,7 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.TrueSpot.ts2.dao.CompanyDao;
 import com.TrueSpot.ts2.dto.CompanyDto;
+
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 @Controller
+@RequestMapping("/company")
 public class CompanyController {
 	@Autowired
 	private CompanyDao companyDao;
